@@ -1,0 +1,6 @@
+monthly_electricity:
+  source: input_number.electricity_meter
+  cycle: monthly
+daily_electricity:
+  source: input_number.electricity_meter
+  cycle: daily
