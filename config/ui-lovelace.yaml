@@ -1,0 +1,36 @@
+views:
+  - title: Комунальні
+    path: komunalni
+    cards:
+      - type: entities
+        title: Електроенергія
+        entities:
+          - entity: input_number.electricity_meter
+          - entity: sensor.vartist_elektroenergii_za_misiats
+          - entity: sensor.vartist_elektroenergii_za_den
+          - entity: sensor.monthly_electricity
+          - entity: sensor.daily_electricity
+        state_color: true
+      - type: history-graph
+        title: Споживання електроенергії
+        entities:
+          - entity: sensor.monthly_electricity
+          - entity: sensor.daily_electricity
+        hours_to_show: 24
+        refresh_interval: 60
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Електроенергія — подобово
+            entities:
+              - entity: sensor.daily_electricity
+                name: Споживання за день (кВт·год)
+              - entity: sensor.vartist_elektroenergii_za_den
+                name: Вартість за день (₴)
+          - type: entities
+            title: Електроенергія — помісячно
+            entities:
+              - entity: sensor.monthly_electricity
+                name: Споживання за місяць (кВт·год)
+              - entity: sensor.vartist_elektroenergii_za_misiats
+                name: Вартість за місяць (₴)
