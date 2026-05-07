@@ -1,0 +1,7 @@
+electricity_meter:
+  name: Лічильник електроенергії
+  min: 0
+  max: 999999
+  step: 1
+  mode: box        # ← поле для введення, а не слайдер
+  unit_of_measurement: kWh
