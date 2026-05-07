@@ -1,0 +1,4 @@
+# Підключаємо окремі директорії
+input_number: !include_dir_merge_named input_numbers/
+utility_meter: !include_dir_merge_named utility_meters/
+template: !include_dir_merge_list sensors/
