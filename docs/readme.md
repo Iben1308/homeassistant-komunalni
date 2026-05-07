@@ -37,22 +37,37 @@
 ## 📂 Структура репозиторію
 homeassistant-komunalni/
 │
-├── config/
-│   ├── configuration.yaml
-│   ├── customize.yaml
-│   ├── ui-lovelace.yaml
-│   └── sensors/
-│       ├── electricity.yaml
-│       ├── water.yaml
-│       ├── gas.yaml
-│       ├── rent.yaml
-│       └── other.yaml
+├── config/                  # основні файли Home Assistant
+│   ├── configuration.yaml          # головний конфіг
+│   ├── ui-lovelace.yaml            # панель "Комунальні"
 │
-├── docs/
-│   ├── README.md
-│   └── screenshots/
+├── input_numbers/                  # ручний ввід показників
+│   ├── electricity.yaml            # електролічильник
+│   ├── water.yaml                  # вода
+│   └── gas.yaml                    # газ
 │
-└── .gitignore
+├── utility_meters/                 # лічильники за періодами
+│   ├── electricity.yaml            # щоденний + місячний електроенергія
+│   ├── water.yaml                  # щомісячний водомір
+│   └── gas.yaml                    # щомісячний газ
+│
+├── sensors/                        # шаблонні сенсори вартості
+│   ├── electricity.yaml            # вартість за день/місяць
+│   ├── water.yaml                  # вартість води
+│   └── gas.yaml                    # вартість газу
+│
+├── automations.yaml                # автоматизації
+├── scripts.yaml                    # скрипти
+├── scenes.yaml                     # сцени
+│
+├── themes/                         # теми для frontend
+│   └── *.yaml
+│
+├── docs/                           # документація
+│   ├── README.md                   # опис проєкту
+│   └── screenshots/                # скріншоти панелі
+│
+└── .gitignore                      
 
 ---
 
