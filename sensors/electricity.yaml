@@ -1,0 +1,16 @@
+- sensor:
+    - name: "Вартість електроенергії за місяць"
+      unique_id: electricity_cost_monthly
+      unit_of_measurement: "₴"
+      state: >
+        {% set tariff = 4.32 %}
+        {% set kwh = states('sensor.monthly_electricity') | float(0) %}
+        {{ (kwh * tariff) | round(2) }}
+- sensor:
+    - name: "Вартість електроенергії за день"
+      unique_id: electricity_cost_daily
+      unit_of_measurement: "₴"
+      state: >
+        {% set tariff = 4.32 %}
+        {% set kwh = states('sensor.daily_electricity') | float(0) %}
+        {{ (kwh * tariff) | round(2) }}
