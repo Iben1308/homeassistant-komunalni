@@ -35,7 +35,7 @@
 ---
 
 ## 📂 Структура репозиторію
-homeassistant-komunalni/
+```homeassistant-komunalni/
 │
 ├── config/                  # основні файли Home Assistant
 │   ├── configuration.yaml          # головний конфіг
@@ -68,7 +68,7 @@ homeassistant-komunalni/
 │   └── screenshots/                # скріншоти панелі
 │
 └── .gitignore                      
-
+```
 ---
 
 ## 🚀 Використання
